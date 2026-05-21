@@ -1,0 +1,212 @@
+body{
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:weight;
+  font-style: normal;
+  margin: 0;
+  color: white;
+  background-color: black;
+  overflow: hidden; /*iska matlab hai agar box se zyada content hai to vo bahar na nikle aur na scroll kar ske hum*/
+}
+.main{
+    display: flex;
+    height: 100vh; /*means 100%of viewport height*/
+    padding: 0.5rem;
+}
+.sidebar{
+    background-color: black;
+    width:350px;
+    border-radius: 1rem; /*16px*/
+    margin-right: 0.5rem;
+}
+.main-content{
+    background-color: #121212;
+    flex: 1;/*mtlb baaki div me jitna content hai utna space do unko aur bacha saara mujhe dedo*/
+    border-radius: 1rem; /*16px*/
+    overflow: auto; /* jab zarurat hogi tabhi scroll bar dikhai dega*/
+    padding: 0 1.5rem 0 1.5rem;
+}
+.player{
+    background-color: black;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 72px;
+}
+.nav{
+    background-color:#121212 ;
+    border-radius: 1rem;
+    display: flex; /*by default row me aa gaye*/
+    flex-direction: column;
+    justify-content: center; /* isse hz direct me align hota hai pr flex direct colm hai isliye ye use kiya*/
+    height: 100px;
+    padding: 0.5rem 0.75rem; /*rem isliye use kr rhe hai to make site responsive*/
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.nav-option{
+    line-height: 2.5rem; /*line height means 1 line kitni space me aaye */
+    opacity: 0.7;
+    padding: 0.5em 0.7rem ;
+}
+.nav-option i{
+    font-size: 1.25rem;
+}
+.nav-option a{
+    font-size: 1rem;
+     margin-left: 0.5rem;
+}
+.nav-option:hover{
+    opacity: 1;
+}
+.library{ 
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+.options{
+    display: flex;
+    justify-content: space-between;/*isse arrow aur + right mew aa gaye beech me jagah ho gai*/
+    align-items: center;
+}
+.lib-opt img{ /*lib opt kp nav-options class bhi de di isse jo stle nav-options me aaya wahi lib-opt me aa jayega*/
+    height: 1.25rem;
+    width: 1.25rem;
+
+}
+.icons{
+    font-size: 1.25rem;
+    display: flex;
+}
+.icons i{
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+.icons i:hover{
+    opacity: 1;
+}
+.box{
+    background-color: #232323;
+    height: 8rem;
+    border-radius: 0.75rem;
+    margin: 0.75rem 0 1.5rem 0;
+    padding: 0.75rem 1.25rem;
+}
+.box-p1{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.box-p2{
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+.badge{
+    background-color: white;
+    border: none; /*by default ek border hota hai use hatana hai */
+    border-radius:100px;
+    font-weight: 700;
+    height: 1.84rem;
+    width: fit-content;/*content dabbe me fit ho jayega*/
+}
+
+.dark-badge{
+    color: white;
+    background-color: black;
+}
+.sticky-nav{
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    z-index: 10; /*jb ye nhi likha tha tb card info nav pr overlap kr rhi thi scroll krne pr*/
+}
+.sticky-nav-icons{
+    margin-left: 0.5rem;
+}
+.sticky-nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-item{
+    margin-right: 1rem;
+}
+
+@media (max-width:1000px){
+    .hide{display: none;
+    }
+}
+
+.card{
+    background-color: #232323;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;/*agar 5-6 cards hai to vo ek line me ghusne ke bajaye next line me aa jaye*/
+}
+.card-img{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.card-title{
+    font-weight: 600;
+}
+.card-info{
+    font-size: 0.77rem;
+    opacity: 0.8;
+}
+
+.footer{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    width: 90%;
+    height: 50%;
+    border-top:1px solid white ;
+    opacity: 0.4;
+}
+
+.music-player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.album{
+    width: 25%;
+}
+.player{
+    width: 50%;
+}
+
+.player-controls{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.control{
+    width: 25%;
+}
+.player-icon{
+    height: 1rem;
+    margin-right:1.75rem ;
+    opacity: 0.7;
+}
+.player-icon:hover{
+    opacity: 1;
+}
